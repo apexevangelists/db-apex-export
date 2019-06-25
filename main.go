@@ -159,7 +159,6 @@ func getConnectionString(connection TConnection) string {
 /********************************************************************************/
 // To execute, at a minimum we need (connection && (object || sql))
 func checkMinFlags() {
-	return
 	// connection is required
 	bHaveConnection := (getConnectionString(connection) != "")
 
@@ -175,10 +174,11 @@ func checkMinFlags() {
 	}
 
 	if !bHaveObject {
-		fmt.Printf("  requires either an Object (Table or View) or SQL to export\n")
+		fmt.Printf("  requires at least 1 application id to export\n")
 	}
 
 	if !bHaveConnection || !bHaveObject {
+		flag.PrintDefaults()
 		os.Exit(1)
 	}
 }
