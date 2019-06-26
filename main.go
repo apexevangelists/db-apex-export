@@ -59,10 +59,10 @@ func parseFlags() {
 
 	flag.StringVar(&config.configFile, "configFile", "config", "Configuration file for general parameters")
 	flag.BoolVar(&config.debugMode, "debug", false, "Debug mode (default=false)")
-	flag.StringVar(&config.appID, "appId", "", "Application ID to export (specify multiple seperated by a comma)")
-	flag.StringVar(&config.outputFilename, "o", "", "Filename used for the export file (specify multiple seperated by a comma)")
+	flag.StringVar(&config.appID, "appId", "", "Application ID to export (specify multiple separated by a comma)")
+	flag.StringVar(&config.outputFilename, "o", "", "Filename used for the export file (specify multiple separated by a comma)")
 
-	flag.StringVar(&config.connectionConfig, "connection", "", "Confguration file for connection")
+	flag.StringVar(&config.connectionConfig, "connection", "", "Configuration file for connection")
 
 	flag.StringVar(&connection.dbConnectionString, "db", "", "Database Connection, e.g. user/password@host:port/sid")
 
